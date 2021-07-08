@@ -22,7 +22,7 @@
 
         </div>
     </div>
-    <div class="overflow-y-scroll px-10 conversation">
+    <div class="overflow-y-scroll sm:px-5 px-10 conversation">
         <div class="w-full">
             <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </span>
@@ -124,7 +124,7 @@
         </div>
     </div>
 
-    <form action="" class="w-full mt-2 mb-4 rounded px-8 pt-1 flex items-center">
+    <form action="" class="w-full mt-2 mb-4 rounded sm:px-1 px-8 pt-1 flex items-center">
         <input placeholder="Type your message" class="shadow-md outline-none w-full pr-10 bg-black rounded-full text-gray-600 ml-5 px-3 py-2" type="textarea">
         <label class="hover:bg-gray-500 relative right-9 px-2 py-1 rounded-full" for="file-input">
             <i class="text-white fas fa-paperclip"></i>

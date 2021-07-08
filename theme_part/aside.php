@@ -1,4 +1,4 @@
-<aside class="pr-1 overflow-hidden sidebar w-full h-50 sm:w-2/3 md:w-2/4 md:h-full lg:w-1/3 xl:w-1/3 2xl:w-1/6 bg-gray-900  rounded-tr-xl rounded-br-xl">
+<aside class="pr-1 overflow-hidden sidebar w-full h-50 sm:w-2/3 md:w-2/4 md:h-full lg:w-1/3 xl:w-1/3 2xl:w-1/6 bg-gray-900 shadow- rounded-br-xl">
     <div class="w-full h-20 px-9 sm:px-2 md:px-6  flex items-center">
         <div>
             <div class="mt-2">
