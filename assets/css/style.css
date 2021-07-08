@@ -5,10 +5,10 @@
 ::-webkit-scrollbar {
   width: 10px;
   padding: 10px;
-  border-radius: 30px; 
+  border-radius: 30px;
 }
 ::-webkit-scrollbar-track {
-  background-color: rgba(17, 24, 39,1);
+  
   border-radius: 30px;
   margin-bottom: 170px;
 }
