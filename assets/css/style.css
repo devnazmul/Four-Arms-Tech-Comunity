@@ -1,18 +1,41 @@
 .wrap{
-
     height: 100vh;
 }
+.message{
+  height: 100vh;
+}
+.friend_list{
+  height: 72%;
+}
+.conversation{
+  height: 77%;
+}
+#file-input{
+  display: none;
+  height: 0;
+  width: 0;
+}
+#submit-input{
+  display: none;
+
+}
+#search-input{
+  display: none;
+}
+
+
+
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
   padding: 10px;
   border-radius: 30px;
 }
 ::-webkit-scrollbar-track {
-  
+  background-color: rgb(0, 0, 0);
   border-radius: 30px;
-  margin-bottom: 170px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #1F2937;
+  background-color: #0069fc;
   border-radius: 30px;
+  min-height: 10px;
 }
