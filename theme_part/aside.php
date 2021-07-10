@@ -14,7 +14,7 @@
     </div>
     <hr class="border-gray-700 w-5/6 mx-auto">
     <form action="" method="get" class="w-full h-12 mx-5 my-5 flex">
-        <input class="block w-full bg-gray-200 text-gray-100 rounded border-none outline-none bg-gray-800 py-3 px-4 mb-3" id="grid-first-name" type="text" placeholder="Search people">
+        <input class="block w-full text-gray-100 rounded border-none outline-none bg-gray-800 py-3 px-4 mb-3" id="grid-first-name" type="text" placeholder="Search people">
         <button class="relative right-10 hover:bg-gray-700 rounded-r bottom-0 w-12 h-9 "><i class="text-gray-500 fas fa-search"></i></button>
     </form>
     <div class="overflow-y-scroll friend_list">
