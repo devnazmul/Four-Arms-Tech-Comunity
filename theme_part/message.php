@@ -33,14 +33,15 @@
             </span>
         </div>
         <div class="w-full">
+            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </span>
+        </div>
+        <div class="w-full">
             <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </span>
         </div>
 
-        <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
+
         <div class="w-full">
             <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </span>

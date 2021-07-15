@@ -9,7 +9,7 @@ include_once '../db/config.php';
 $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
 $username = mysqli_real_escape_string($conn, $_POST['username']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
-$password = mysqli_real_escape_string($conn, md5($_POST['password']));
+$password = md5($_POST['password']);
 
 
 if (!empty($fullname) && !empty($username) && !empty($email) && !empty($password)) { // Check all filed are filled
@@ -38,17 +38,16 @@ if (!empty($fullname) && !empty($username) && !empty($email) && !empty($password
                     $time = time(); // current time
                     if ($file_size < 2097152) { // move image to folder
                         $status = 'Active now'; // when user signup show Active now status
-                        $file_new_name = $username . '-' . $time . '-'.$file_name; // make unique name of image
+                        $file_new_name = $username . '-' . $time . '-' . $file_name; // make unique name of image
                         if ($status == 'Active now') {
 
                             if (move_uploaded_file($file_tmp, "images/" . $file_new_name)) { // move image to images folder
                                 $random_id = rand(time(), 10000000); // make random id
-                                $sql3 = mysqli_query($conn, "INSERT INTO users(unique_id, username, user_fullname, user_email, user_password, user_profilepic, status) VALUES ('{$random_id}','{$username}','{$fullname}','{$email}','{$password}','{$file_name}','{$status}')");
+                                $sql3 = mysqli_query($conn, "INSERT INTO users(unique_id, username, user_fullname, user_email, user_password, user_profilepic, status) VALUES ('{$random_id}','{$username}','{$fullname}','{$email}','{$password}','{$file_new_name}','{$status}')");
 
                                 // Inser user's all data into DataBase
                                 if ($sql3) {
                                     $sql4 = mysqli_query($conn, "SELECT * FROM users WHERE user_email = '{$email}'");
-
                                     // make session
                                     if (mysqli_num_rows($sql4)) {
                                         $row = mysqli_fetch_assoc($sql4);

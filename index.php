@@ -1,5 +1,10 @@
 <?php
 include "./theme_part/head.php";
+
+session_start();
+if (isset($_SESSION['unique_id'])) {
+  header('Location: conversation.php');
+}
 ?>
 
 <main class="

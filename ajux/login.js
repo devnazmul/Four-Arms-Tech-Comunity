@@ -1,7 +1,7 @@
   // sign up ajax
-const form = document.querySelector("#signup_from"),
-    submitBtn = form.querySelector("#signup_btn"),
-    err = document.querySelector("#error");
+const   form = document.querySelector("#login_form"),
+        submitBtn = form.querySelector("#login_btn"),
+        err = document.querySelector("#error");
 
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -9,7 +9,7 @@ form.onsubmit = (e) => {
 
 submitBtn.onclick = () => {
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "actions/signup.php", true);
+    xhr.open("POST", "actions/login.php", true);
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {

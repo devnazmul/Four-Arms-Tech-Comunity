@@ -1,4 +1,6 @@
 <?php
+$domain = 'http://localhost/FourArmsCommunity';
+
 $host = "localhost";
 $user = "root";
 $pass = "";
