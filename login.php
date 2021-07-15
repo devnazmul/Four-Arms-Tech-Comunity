@@ -1,5 +1,5 @@
 <?php
-include "./theme_part/head.php";
+include "./app_parts/head.php";
 session_start();
 if (isset($_SESSION['unique_id'])) {
     header('Location: conversation.php');
@@ -28,5 +28,5 @@ if (isset($_SESSION['unique_id'])) {
 
 <script src="ajux/login.js" type="text/javascript"></script>
 <?php
-include "./theme_part/footer.php";
+include "./app_parts/footer.php";
 ?>

@@ -7,17 +7,17 @@ if (!isset($_SESSION['unique_id'])) {
 
 
 
-include "./theme_part/head.php";
+include "./app_parts/head.php";
 ?>
 
 <main class="wrap w-full bg-gray-800 flex">
     <?php
-    include "./theme_part/aside.php";
-    include "./theme_part/message.php";
+include "./app_parts/aside.php";
+include "./app_parts/message.php";
     ?>
 </main>
 
 
 <?php
-include "./theme_part/footer.php";
+include "./app_parts/footer.php";
 ?>

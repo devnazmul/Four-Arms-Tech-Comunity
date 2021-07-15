@@ -1,5 +1,5 @@
 <?php
-include "./theme_part/head.php";
+include "./app_parts/head.php";
 header('Location: conversation.php');
 ?>
 
@@ -32,5 +32,5 @@ header('Location: conversation.php');
 
 <script src="./ajux/findFriend.js"></script>
 <?php
-include "./theme_part/footer.php";
+include "./app_parts/footer.php";
 ?>
