@@ -35,23 +35,32 @@ if (mysqli_num_rows($sql) > 0) {
         </a>
     </div>
     <hr class="border-gray-700 w-5/6 mx-auto">
+    <!-- SEARCH FORM  -->
     <form action="" method="get" class="w-full h-12 mx-5 my-5 flex">
-        <input class="block w-full text-gray-100 rounded border-none outline-none bg-gray-800 py-3 px-4 mb-3" id="grid-first-name" type="text" placeholder="Search people">
-        <button class="relative right-10 hover:bg-gray-700 rounded-r bottom-0 w-12 h-9 "><i class="text-gray-500 fas fa-search"></i></button>
+        <input id="searchInput" class="block w-full text-gray-100 rounded border-none outline-none bg-gray-800 py-3 px-4 mb-3" id="grid-first-name" type="text" placeholder="Search people">
+        <button id="searchBtn" class="relative right-10 hover:bg-gray-700 rounded-r bottom-0 w-12 h-9 "><i class="text-gray-500 fas fa-search"></i></button>
     </form>
-    <div class="overflow-y-scroll friend_list">
-        <div class="w-full h-20 px-9 sm:px-2 md:px-6 flex items-center">
-            <div>
-                <div class="mt-2">
-                    <img class="rounded-full mr-3 h-14 w-auto border-4 border-gray-700" src="./assets/img/profile_me.jpg" alt="">
-                    <div class="bg-green-500 border-2 border-gray-700 h-4 w-4 rounded-full float-right relative bottom-4 right-3"></div>
-                </div>
-            </div>
-            <div>
-                <h2 class="text-gray-500 font-bold">Md Nazmul Islam</h2>
-                <span class="text-white lg\:font-light text-gray-700 text-xs">Hello how Are You........</span>
-            </div>
-        </div>
+
+
+    <!-- FRIENDS STATUS CATEGORY LINKS  -->
+    <div class="w-full h-12 my-3 flex justify-around text-white text-2xl">
+        <a title="Messages" class="hover:text-blue-600 bg-gray-800 px-5 py-2 rounded-full" href="">
+            <i class="fas fa-comments"></i>
+        </a>
+        <a title="Friends" class="hover:text-blue-600 bg-gray-800 px-5 py-2 rounded-full" href="">
+            <i class="fas fa-user-check"></i>
+        </a>
+        <a title="Groups" class="hover:text-blue-600 bg-gray-800 px-5 py-2 rounded-full" href="">
+            <i class="fas fa-users"></i>
+        </a>
+    </div>
+
+
+    <!-- FRIENDS LIST  -->
+
+    <div id="userList" class="overflow-y-scroll friend_list">
+
     </div>
 </aside>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
