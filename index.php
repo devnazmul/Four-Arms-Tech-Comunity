@@ -41,26 +41,24 @@ if (isset($_SESSION['unique_id'])) {
       <form id="signup_from" class="my-5 w-full flex justify-center items-center flex-col lg:block" action="#" enctype="multipart/form-data">
 
         <div class="flex w-full justify-center flex-col items-center">
+
           <label class="
               appearance-none
               w-20
               h-20
-              text-gray-100
               rounded-full
               border-none
               outline-none
               bg-gray-900
               focus:bg-gray-900
-              py-3
-              px-4
               mb-1
               flex
               justify-center
               items-center
             " for="profile_pic">
-            <i class="text-2xl text-gray-600 fas fa-camera"></i>
+            <img class="object-cover rounded-full w-full h-full" id="output" src='./assets/img/upload.png' for="profile_pic" />
           </label>
-          <input name="profile_pic" id="profile_pic" type="file" style="display: none" />
+          <input onchange="loadFile(event)" name="profile_pic" id="profile_pic" type="file" style="display: none" required />
           <h2 class="text-gray-400 mb-3">Upload profile picture</h2>
         </div>
         <div id="error" class="w-full hidden justify-center flex-col items-center bg-red-100 border border-red-400 text-red-700 px-4 py-1 mb-3 rounded relative">
@@ -147,7 +145,15 @@ if (isset($_SESSION['unique_id'])) {
 
 
 
-
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };
+</script>
 <script src="ajux/signup.js" type="text/javascript"></script>
 
 <?php

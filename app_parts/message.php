@@ -24,104 +24,49 @@
     </div>
     <div class="overflow-y-scroll sm:px-5 px-10 conversation">
         <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
+            <div class="float-left w-1/2 clear-both">
+                <p class="bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.a
+                </p>
+                <div class="h-10 w-10 relative bottom-6 right-3">
+                    <img class="object-cover rounded-full w-full h-full  mr-3 border-2 border-gray-700" src="./actions/images/naymer-1626538285-Four Arms Tecb bbbbbbvvvvbnnh-1.png" alt="">
+                </div>
+            </div>
         </div>
 
         <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-        <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-        <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-
-
-        <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
+            <div class="float-right w-1/2 text-white clear-both ">
+                <p class="bg-gray-700  my-2 p-5 rounded-3xl text-right">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.askdjhk fgj sdgjh fdghfg h d hdg dshgfdg
+                </p>
+                <div class="h-10 float-right w-10 relative bottom-6 left-700">
+                    <img class="object-cover rounded-full w-full h-full  mr-3 border-2 border-gray-700" src="./actions/images/naymer-1626538285-Four Arms Tecb bbbbbbvvvvbnnh-1.png" alt="">
+                </div>
+            </div>
         </div>
 
         <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-        <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-
-        <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-        <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
+            <div class="float-left w-1/2 clear-both">
+                <p class="bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.a
+                    <img class="my-5" src="./actions/images/FourArmsTech-1626517757-Four Arms Tech 2-1.png" alt="">
+                </p>
+                <div class="h-10 w-10 relative bottom-6 right-3">
+                    <img class="object-cover rounded-full w-full h-full  mr-3 border-2 border-gray-700" src="./actions/images/naymer-1626538285-Four Arms Tecb bbbbbbvvvvbnnh-1.png" alt="">
+                </div>
+            </div>
         </div>
 
         <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-        <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-
-        <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-        <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-
-        <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-        <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-
-        <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-        <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-
-        <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-        <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-
-        <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-        <div class="w-full">
-            <span class="float-left  clear-both bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-        </div>
-
-        <div class="w-full">
-            <span class="float-right text-white clear-both bg-gray-700  my-2 p-5 rounded-3xl text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
+            <div class="float-right w-1/2 text-white clear-both ">
+                <p class="bg-gray-700  my-2 p-5 rounded-3xl text-right">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.askdjhk fgj sdgjh fdghfg h d hdg dshgfdg
+                    <img class="my-5" src="./actions/images/BabuSheikh-1626538381-204147104_4350693271610586_3723998609996403124_n.jpg" alt="">
+                </p>
+                <div class="h-10 float-right w-10 relative bottom-6 left-700">
+                    <img class="object-cover rounded-full w-full h-full  mr-3 border-2 border-gray-700" src="./actions/images/naymer-1626538285-Four Arms Tecb bbbbbbvvvvbnnh-1.png" alt="">
+                </div>
+            </div>
         </div>
     </div>
 
