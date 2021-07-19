@@ -1,12 +1,17 @@
 
 <?php
-if (isset($_GET['username'])) {
-    $sql = mysqli_query($conn,"SELECT * FROM users WHERE username = '{$_GET['username']}'");
+
+$my_unique_id = $row['unique_id']; // this computer user unique_id
+
+if (isset($_GET['id'])) {
+    $sql = mysqli_query($conn,"SELECT * FROM users WHERE unique_id = '{$_GET['id']}'");
     if (mysqli_num_rows($sql) > 0) {
-        $row2 = mysqli_fetch_assoc($sql);
+        $row2 = mysqli_fetch_assoc($sql); // other computer user data
+        $other_unique_id = $row2['unique_id'];
     }
 ?>
 <div class="overflow-hidden message w-full hidden sm:block">
+    <!-- Heade Area  -->
     <div class="flex bg-gray-900 h-20 flex justify-between items-center">
         <div>
             <div class="w-full h-20 px-9 flex items-center">
@@ -30,10 +35,11 @@ if (isset($_GET['username'])) {
 
         </div>
     </div>
+    <!-- SMS Area  -->
     <div class="overflow-y-scroll sm:px-5 px-10 conversation">
         <div class="w-full">
             <div class="float-left w-1/2 clear-both">
-                <p class="bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">
+                <p class="bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.a
                 </p>
                 <div class="h-10 w-10 relative bottom-6 right-3">
@@ -41,10 +47,9 @@ if (isset($_GET['username'])) {
                 </div>
             </div>
         </div>
-
         <div class="w-full">
             <div class="float-right w-1/2 text-white clear-both ">
-                <p class="bg-gray-700  my-2 p-5 rounded-3xl text-right">
+                <p class="bg-gray-700  my-2 p-5 rounded-3xl text-left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.askdjhk fgj sdgjh fdghfg h d hdg dshgfdg
                 </p>
                 <div class="h-10 float-right w-10 relative bottom-6 left-700">
@@ -55,7 +60,7 @@ if (isset($_GET['username'])) {
 
         <div class="w-full">
             <div class="float-left w-1/2 clear-both">
-                <p class="bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-right">
+                <p class="bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.a
                     <img class="my-5" src="./actions/images/FourArmsTech-1626517757-Four Arms Tech 2-1.png" alt="">
                 </p>
@@ -67,7 +72,7 @@ if (isset($_GET['username'])) {
 
         <div class="w-full">
             <div class="float-right w-1/2 text-white clear-both ">
-                <p class="bg-gray-700  my-2 p-5 rounded-3xl text-right">
+                <p class="bg-gray-700  my-2 p-5 rounded-3xl text-left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.askdjhk fgj sdgjh fdghfg h d hdg dshgfdg
                     <img class="my-5" src="./actions/images/BabuSheikh-1626538381-204147104_4350693271610586_3723998609996403124_n.jpg" alt="">
                 </p>
@@ -77,18 +82,18 @@ if (isset($_GET['username'])) {
             </div>
         </div>
     </div>
-
-    <form action="" class="w-full mt-2 mb-4 rounded sm:px-1 px-8 pt-1 flex items-center">
-        <input placeholder="Type your message" class="shadow-md outline-none w-full pr-10 bg-black rounded-full text-gray-600 ml-5 px-3 py-2" type="textarea">
-        <label class="hover:bg-gray-500 relative right-9 px-2 py-1 rounded-full" for="file-input">
+    <!-- Form Area  -->
+    <form autocomplete="off" action="#"class="sms_form w-full mt-2 mb-4 rounded sm:px-1 px-8 pt-1 flex items-center">
+        <input name="my_id" value="<?php echo $my_unique_id; ?>" placeholder="Type your message" class="shadow-md outline-none w-full pr-10 bg-black rounded-full text-gray-600 ml-5 px-3 py-2" type="text" hidden>
+        <input name="others_id" value="<?php echo $other_unique_id; ?>" placeholder="Type your message" class="shadow-md outline-none w-full pr-10 bg-black rounded-full text-gray-600 ml-5 px-3 py-2" type="text" hidden>
+        <input name="sms" id="sms_input" placeholder="Type your message" class="shadow-md outline-none w-full pr-10 bg-black rounded-full text-gray-600 ml-5 px-3 py-2" type="textarea">
+        <label class="hover:bg-gray-500 relative right-9 px-2 py-1 rounded-full" for="file_input">
             <i class="text-white fas fa-paperclip"></i>
         </label>
-        <input id="file-input" type="file" />
-        <label class="send-btn relative right-3 hover:bg-gray-300 bg-green-500 shadow hover:bg-green-800 bg-green-500 px-2  py-1 rounded-full " for="submit-input">
-            <i class="text-white fas fa-paper-plane"></i>
-        </label>
-        <input id="submit-input" type="submit">
+        <input name="sms_file" id="file_input" type="file" style="display: none;">
+        <button class="send-btn relative right-3 hover:bg-gray-300 bg-green-500 shadow hover:bg-green-800 bg-green-500 px-2  py-1 rounded-full" id="submit_input" ><i class="text-white fas fa-paper-plane"></i></button>
     </form>
+
 </div>
 <?php
 } else { ?>

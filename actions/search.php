@@ -12,7 +12,7 @@ $result = '';
 $sql2 = mysqli_query($conn, "SELECT * FROM users WHERE user_fullname LIKE '%{$searchTerm}%' OR user_email LIKE '%{$searchTerm}%'");
 if (mysqli_num_rows($sql2) > 0) { // check many users is active.
     while ($row2 = mysqli_fetch_assoc($sql2)) {
-        $result .= '<a href="#?id=' . $row2['username'] . '">
+        $result .= '<a href="?id=' . $row2['unique_id'] . '">
                         <div  class="w-full h-14 px-9 my-3 sm:px-2 md:px-6 flex items-center">
                             <div class="mr-3">
                                 <div class="overflow-hidden w-14 h-14 mt-2">
