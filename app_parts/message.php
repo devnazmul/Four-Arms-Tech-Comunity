@@ -1,16 +1,24 @@
+
+<?php
+if (isset($_GET['username'])) {
+    $sql = mysqli_query($conn,"SELECT * FROM users WHERE username = '{$_GET['username']}'");
+    if (mysqli_num_rows($sql) > 0) {
+        $row2 = mysqli_fetch_assoc($sql);
+    }
+?>
 <div class="overflow-hidden message w-full hidden sm:block">
     <div class="flex bg-gray-900 h-20 flex justify-between items-center">
         <div>
             <div class="w-full h-20 px-9 flex items-center">
                 <div>
-                    <div class="mt-2">
-                        <img class="rounded-full mr-3 h-14 w-auto border-4 border-gray-700" src="./assets/img/profile_me.jpg" alt="">
-                        <div class="bg-green-500 border-2 border-gray-700 h-4 w-4 rounded-full float-right relative bottom-4 right-3"></div>
+                    <div class="overflow-hidden w-14 h-14 mx-2">
+                        <img class="object-cover rounded-full w-full h-full  mr-3 border-4 border-gray-700" src="./actions/images/<?php echo $row2['user_profilepic'];?>" alt="">
+                        <div class="bg-green-500 border-2 border-gray-700 h-4 w-4 rounded-full float-right relative bottom-4 right-1"></div>
                     </div>
                 </div>
                 <div>
-                    <h2 class="text-white font-bold">Md Nazmul Islam</h2>
-                    <span class="text-white lg\:font-light text-gray-600 text-xs">Active Now</span>
+                    <h2 class="text-white font-bold"><?php echo $row2['user_fullname'];?></h2>
+                    <span class="text-white lg\:font-light text-gray-600 text-xs"><?php echo $row2['status'];?></span>
                 </div>
 
             </div>
@@ -82,3 +90,14 @@
         <input id="submit-input" type="submit">
     </form>
 </div>
+<?php
+} else { ?>
+<div class="overflow-y-scroll sm:px-5 px-10 text-center w-full h-full flex justifu-center items-center">
+    <div class="w-full">
+        <h1 class="text-center w-full text-gray-600 font-bold text-5xl" >Please select an user to chatting.</h1>
+    </div>
+    
+</div>
+<?php
+}
+?>

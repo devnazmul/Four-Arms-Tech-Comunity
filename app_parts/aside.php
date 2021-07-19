@@ -1,6 +1,6 @@
 <?php
 include './db/config.php';
-session_start();
+
 
 $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
 if (mysqli_num_rows($sql) > 0) {
@@ -58,7 +58,16 @@ if (mysqli_num_rows($sql) > 0) {
         <div id="userList">
 
         </div>
+        
     </div>
 </aside>
+
+
+
+
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>

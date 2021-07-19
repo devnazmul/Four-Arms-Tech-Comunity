@@ -8,12 +8,12 @@ $result = '';
 // put form data into variables
 $sql = mysqli_query($conn, "SELECT * FROM users");
 if (mysqli_num_rows($sql) == 1) { // check an user is active.
-    $result .= '<div class="w-full h-20 px-9 sm:px-2 md:px-6 flex items-center">
-                    <h1>No User Found</h1>
+    $result .= '<div class="w-full h-12 px-9 sm:px-2 md:px-6 flex justify-center items-center">
+                    <h2 class="text-2xl text-gray-700 font-bold">No User Found</h2>
                 </div>';
 } elseif (mysqli_num_rows($sql) > 0) { // check many users is active.
     while ($row = mysqli_fetch_assoc($sql)) {
-        $result .= '<a href="#?id=' . $row['username'] . '">
+        $result .= '<a href="?username=' . $row['username'] . '">
                         <div  class="w-full h-14 px-9 my-3 sm:px-2 md:px-6 flex items-center">
                             <div class="mr-3">
                                 <div class="overflow-hidden w-14 h-14 mt-2">
@@ -30,6 +30,8 @@ if (mysqli_num_rows($sql) == 1) { // check an user is active.
                     </a>';
     }
 } else {
-    $result .= 'No Active User Available.';
+    $result .= '<div class="w-full h-12 px-9 sm:px-2 md:px-6 flex justify-center items-center">
+                    <h2 class="text-2xl text-gray-700 font-bold">No Active User Available</h2>
+                </div>';
 }
 echo $result;
