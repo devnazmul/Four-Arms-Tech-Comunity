@@ -28,7 +28,7 @@ if (isset($_SESSION['unique_id'])) {
                 if ($row3['sms_file']) {
                     $output .= '<div class="w-full">
                                     <div  class="float-right w-1/2 text-white clear-both ">
-                                        <p style="box-shadow:0 0 15px #0007" class="bg-gray-700 my-2 p-5 rounded-3xl text-left">
+                                        <p style="box-shadow:0 0 15px #0007" class="bg-gray-700 my-2 py-3 px-5 rounded-3xl text-left">
                                         '.$row3['sms'].'
                                         <img class="my-5" src="./actions/sms_files/'.$row3['sms_file'].'" alt="">
                                         </p>
@@ -40,7 +40,7 @@ if (isset($_SESSION['unique_id'])) {
                 } else {
                     $output .= '<div class="w-full">
                                     <div class="float-right w-1/2 text-white clear-both ">
-                                        <p style="box-shadow:0 0 15px #0007" class="bg-gray-700 my-2 p-5 rounded-3xl text-left">
+                                        <p style="box-shadow:0 0 15px #0007" class="bg-gray-700 my-2 py-3 px-5 rounded-3xl text-left">
                                         '.$row3['sms'].'
                                         </p>
                                         <div class="h-10 float-right w-10 relative bottom-6 left-700">
@@ -53,7 +53,7 @@ if (isset($_SESSION['unique_id'])) {
                 if ($row3['sms_file']) {
                     $output .= '<div class="w-full">
                                     <div class="float-left w-1/2 clear-both">
-                                        <p style="box-shadow:0 0 15px #0007" class="bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-left">
+                                        <p style="box-shadow:0 0 15px #0007" class="bg-gradient-to-r from-green-400 to-blue-500 my-2 p-3 px-5 rounded-3xl text-left">
                                             '.$row3['sms'].'
                                             <img class="my-5" src="./actions/sms_files/'.$row3['sms_file'].'" alt="">
                                         </p>
@@ -65,7 +65,7 @@ if (isset($_SESSION['unique_id'])) {
                 } else {
                     $output .= '<div class="w-full">
                                 <div class="float-left w-1/2 clear-both">
-                                    <p style="box-shadow:0 0 15px #0007" class="bg-gradient-to-r from-green-400 to-blue-500 my-2 p-5 rounded-3xl text-left">
+                                    <p style="box-shadow:0 0 15px #0007" class="bg-gradient-to-r from-green-400 to-blue-500 my-2 py-3 px-5 rounded-3xl text-left">
                                         '.$row3['sms'].'
                                     </p>
                                     <div class="h-10 w-10 relative bottom-6 right-3">
