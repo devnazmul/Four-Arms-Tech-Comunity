@@ -41,7 +41,7 @@ if (!empty($fullname) && !empty($username) && !empty($email) && !empty($password
                         $file_new_name = $username . '-' . $time . '-' . $file_name; // make unique name of image
                         if ($status == 'Active now') {
 
-                            if (move_uploaded_file($file_tmp, "images/" . $file_new_name)) { // move image to images folder
+                            if (move_uploaded_file($file_tmp, "images/".$file_new_name)) { // move image to images folder
                                 $random_id = rand(time(), 10000000); // make random id
                                 $sql3 = mysqli_query($conn, "INSERT INTO users(unique_id, username, user_fullname, user_email, user_password, user_profilepic, status) VALUES ('{$random_id}','{$username}','{$fullname}','{$email}','{$password}','{$file_new_name}','{$status}')");
 

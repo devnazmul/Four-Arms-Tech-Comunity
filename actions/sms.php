@@ -21,7 +21,6 @@ if (isset($_SESSION['unique_id'])) {
             if ($status == 'Send') {
                 if (move_uploaded_file($file_tmp, "sms_files/".$file_new_name)) { // move image to images folder
                     $sql = mysqli_query($conn, "INSERT INTO messages(incomming_sms_id, outgoing_sms_id, sms, sms_file) VALUES ({$my_id},{$others_id},'{$sms}','{$file_new_name}')");
-                    echo 'sms & file';
                     die();
                 }
             } else {
@@ -41,8 +40,6 @@ if (isset($_SESSION['unique_id'])) {
             if ($status == 'Send') {
                 if (move_uploaded_file($file_tmp, "sms_files/".$file_new_name)) { // move image to images folder
                     $sql = mysqli_query($conn, "INSERT INTO messages(incomming_sms_id, outgoing_sms_id, sms_file) VALUES ({$my_id},{$others_id},'{$file_new_name}')");
-                    echo 'File';
-                    
                 }
             } else {
                 echo 'File upload Erorr.';
@@ -52,7 +49,6 @@ if (isset($_SESSION['unique_id'])) {
     
     if(!empty($sms)) { // check only file sended or not
         $sql = mysqli_query($conn, "INSERT INTO messages(incomming_sms_id, outgoing_sms_id, sms) VALUES ({$my_id},{$others_id},'{$sms}')");
-        echo 'Sms';
     }
 
 } else {

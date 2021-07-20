@@ -28,7 +28,7 @@ searchInput.onkeyup = () => {
 
 setInterval(() => {
     $.ajax({
-        url: "actions/chatList.php",
+        url: "actions/list.php",
         type: "POST",
         
         success: function (data) {

@@ -15,7 +15,7 @@ submitBtn.onclick = () => {
             if (xhr.status === 200) {
                 let data = xhr.response;
                 if (data == 'Success') {
-                    location.href = 'conversation.php';
+                    location.href = './conversation.php';
                 } else {
                     err.textContent = data;
                     err.style.display = 'flex';
