@@ -34,3 +34,4 @@ if (!empty($user_or_email) && !empty($password)) { // check if all inputs are fi
 } else {
     echo "Please put all information.";
 }
+ 
