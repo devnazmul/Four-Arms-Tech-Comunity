@@ -31,7 +31,8 @@ if (!empty($fullname) && !empty($username) && !empty($email) && !empty($password
                 $file_type = $_FILES['profile_pic']['type'];
                 $file_size = $_FILES['profile_pic']['size'];
                 $file_tmp = $_FILES['profile_pic']['tmp_name'];
-                $file_ext = end(explode('.', $file_name));
+                $explode_function = explode('.', $file_name);
+                $file_ext = end($explode_function);
                 $extentions = ['png', 'jpg', 'jpeg'];
 
                 if (in_array($file_ext, $extentions) === true) { // check extenions allowed or not
