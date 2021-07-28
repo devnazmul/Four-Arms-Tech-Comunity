@@ -1,7 +1,7 @@
 //caht list ajax
 const userList = document.querySelector('#userList'),
     searchInput = document.querySelector('#searchInput'),
-    searchBtn = document.querySelector('#searchBtn');
+    searchBtn = document.querySelector('#searchBtn'); 
 
 searchInput.onkeyup = () => {
     var searchTerm = searchInput.value;
