@@ -23,6 +23,10 @@ if (!empty($user_or_email) && !empty($password)) { // check if all inputs are fi
             // check if all match.
             $row = mysqli_fetch_assoc($sql2); // fetch user data.
             $_SESSION['unique_id'] = $row['unique_id'];
+
+            $time=time()+10;
+            $sql3 = mysqli_query($conn, "UPDATE users SET status='Active Now', last_login = {$time} WHERE unique_id = {$row['unique_id']}") or die('Querry failed In login.php file!');
+
             echo 'Success'; // Return Success.
 
         } else {

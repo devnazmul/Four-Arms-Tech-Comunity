@@ -3,13 +3,32 @@ include './db/config.php';
 if (!isset($_SESSION['unique_id'])) {
     header('Location: login.php');
 }
+
+$sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}") or die('Querry failed In aside.php file!');
+
+if (mysqli_num_rows($sql) > 0) {
+    $row = mysqli_fetch_assoc($sql);
+}
 ?>
-<link rel="stylesheet" href="aside.css">
+
 <aside
     class="pr-1 overflow-hidden sidebar w-full sm:w-2/3 md:w-2/4 md:h-full lg:w-1/3 xl:w-1/3 2xl:w-1/6 bg-gray-900 shadow- rounded-br-xl">
     <div class="w-full h-20 px-9 sm:px-2 md:px-6 flex justify-between items-center">
         <div id="my_profile">
-
+            <div class="flex items-center">
+                <div>
+                    <a href="<?php echo $domain;?>/account.php?unique_id='<?php echo $row['unique_id']; ?>'">
+                        <div class="overflow-hidden w-14 h-14">
+                            <img class="object-cover rounded-full w-full h-full  mr-3 border-2 border-green-500"
+                                src="./actions/images/<?php echo $row['user_profilepic']; ?>" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="ml-3">
+                    <h2 class="text-white font-bold"><?php echo $row['user_fullname']; ?></h2>
+                    <span class="text-white lg\:font-light text-gray-600 text-xs"><?php echo $row['status']; ?></span>
+                </div>
+            </div>
         </div>
         <a class="no-underline text-white" title="Logout" href="logout.php ">
             <div class=" transform rotate-90">
@@ -36,7 +55,7 @@ if (!isset($_SESSION['unique_id'])) {
     <!-- FRIENDS LIST  -->
     <div class="h-30 friend_list">
         <!-- FRIENDS STATUS CATEGORY LINKS  -->
-        <div
+        <!-- <div
             class="w-full sticky overflow-hidden top-0 bg-gray-900 z-50 pb-2 flex items-center justify-around text-white text-2xl">
             <a title="Find Friends" class="py-3 px-10 flex items-center justify-center hover:bg-gray-800 rounded-full"
                 href="">
@@ -46,7 +65,7 @@ if (!isset($_SESSION['unique_id'])) {
                 href="">
                 <img class="w-5" src="./assets/icons/add-friend.svg" alt="">
             </a>
-        </div>
+        </div> -->
         <!-- FRIENDS LIST  -->
         <div id="userList" class="overflow-y-scroll h-full">
 
@@ -58,4 +77,4 @@ if (!isset($_SESSION['unique_id'])) {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
-<script></script>
+<script src="./ajax/checkActiveOrNot.js" type="text/javascript"></script>

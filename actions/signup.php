@@ -37,12 +37,13 @@ if (!empty($fullname) && !empty($username) && !empty($email) && !empty($password
 
                 if (in_array($file_ext, $extentions) === true) { // check extenions allowed or not
                     $time = time(); // current time
+                    $time_plus = time()+10;
                     if ($file_size < 2097152) { // move image to folder
                         $file_new_name = $username . '-' . $time . '-' . $file_name; // make unique name of image
                             if (move_uploaded_file($file_tmp,'images/'.$file_new_name)) { // move image to images folder
                                 $status = 'Active now'; // when user signup show Active now status
                                 $random_id = rand(time(), 10000000); // make random id
-                                $sql3 = mysqli_query($conn, "INSERT INTO users(unique_id, username, user_fullname, user_email, user_password, user_profilepic, last_login, status) VALUES ('{$random_id}','{$username}','{$fullname}','{$email}','{$password}','{$file_new_name}',{$time},'{$status}')");
+                                $sql3 = mysqli_query($conn, "INSERT INTO users(unique_id, username, user_fullname, user_email, user_password, user_profilepic, last_login, status) VALUES ('{$random_id}','{$username}','{$fullname}','{$email}','{$password}','{$file_new_name}',{$time_plus},'{$status}')");
                                 // Inser user's all data into DataBase
                                 if ($sql3) {
                                     $sql4 = mysqli_query($conn, "SELECT * FROM users WHERE user_email = '{$email}'");

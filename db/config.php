@@ -1,5 +1,5 @@
 <?php
-$domain = 'http://localhost/FourArmsCommunity';
+$domain = 'http://localhost/Four-Arms-Tech-Comunity';
 
 $host = "localhost";
 $user = "root";

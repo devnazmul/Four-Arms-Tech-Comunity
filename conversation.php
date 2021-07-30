@@ -17,6 +17,7 @@ include "./app_parts/head.php";
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="./ajax/list.js" type="text/javascript"></script>
 <script src="./ajax/sms.js" type="text/javascript"></script>
+<script src="./ajax/checkActiveOrNot.js" type="text/javascript"></script>
 <?php
 include "./app_parts/footer.php";
 ?>

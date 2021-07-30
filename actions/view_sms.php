@@ -28,7 +28,7 @@ if (isset($_SESSION['unique_id'])) {
                 if ($row3['sms_file']) {
                     if ($row3['sms'] == "") {
                         $output .= '<div class="w-full">
-                                    <div  class="float-right max-w-sm text-white clear-both pt-3">
+                                    <div  class="float-right max-w-sm text-white clear-both mt-3">
                                         <img style="box-shadow:0 0 15px #0007"  class="mb-2 rounded-3xl" src="./actions/sms_files/'.$row3['sms_file'].'" alt="">
                                     <div class="h-10 float-right w-10 relative bg-gray-700 rounded-full bottom-5 left-3">
                                         <img style="box-shadow:0 0 15px #0007" class="object-cover rounded-full w-full h-full  mr-3 border-2 border-green-700" src="./actions/images/' . $row['user_profilepic'] . '" alt="">
@@ -36,7 +36,7 @@ if (isset($_SESSION['unique_id'])) {
                                 </div>';
                     } else{
                     $output .= '<div class="w-full">
-                                    <div  class="float-right max-w-sm text-white clear-both ">
+                                    <div  class="float-right max-w-sm text-white clear-both mt-3">
                                         <p style="box-shadow:0 0 15px #0007" class="bg-gray-700 mt-0 p-3 px-5 rounded-t-3xl text-left">
                                             '.$row3['sms'].'
                                         </p>
@@ -48,7 +48,7 @@ if (isset($_SESSION['unique_id'])) {
                     }
                 } else {
                     $output .= '<div class="w-full">
-                                    <div class="float-right text-white clear-both">
+                                    <div class="float-right text-white clear-both mt-3">
                                         <p style="box-shadow:0 0 15px #0007" class="bg-gray-700 mr-3 py-3 px-5 rounded-3xl text-left">
                                             '.$row3['sms'].'
                                         </p>

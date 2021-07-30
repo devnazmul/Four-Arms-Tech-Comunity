@@ -42,8 +42,7 @@ if (window.innerWidth < 640) {
     setInterval(() => {
         $.ajax({
             url: "actions/mobile_list.php",
-            type: "POST",
-
+            type: "GET",
             success: function (data) {
                 if (!searchInput.classList.contains('searchActive')) {
                     userList.innerHTML = data;
@@ -55,8 +54,7 @@ if (window.innerWidth < 640) {
     setInterval(() => {
         $.ajax({
             url: "actions/list.php",
-            type: "POST",
-
+            type: "GET",
             success: function (data) {
                 if (!searchInput.classList.contains('searchActive')) {
                     userList.innerHTML = data;

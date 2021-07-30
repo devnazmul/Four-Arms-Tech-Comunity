@@ -1,8 +1,7 @@
-setInterval(() => { // check user active or not
+setInterval(() => { // Send user heratbit to the erver 
     $.ajax({
         url: "actions/checkActiveOrNot.php",
-        success: function (data) {
-            $('#my_profile').html(data);
-        }
+        type: "GET",
+        success: (data) => {}
     });
-}, 5);
+}, 500);
