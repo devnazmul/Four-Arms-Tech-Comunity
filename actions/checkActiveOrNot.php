@@ -8,7 +8,7 @@ $user_unique_id = $_SESSION['unique_id'];
 // import user last login +6s from current time
 $time=time()+10;
 // Update last_login Time
-$sql = mysqli_query($conn, "UPDATE users SET last_login = {$time} WHERE unique_id = {$user_unique_id}") or die('Querry failed In checkActiveOrNot.php file!');
+$sql = mysqli_query($conn, "UPDATE users SET last_login = {$time}, status = 'Active Now' WHERE unique_id = {$user_unique_id}") or die('Querry failed In checkActiveOrNot.php file!');
 
 
 // Update Status Offline if Last_login Time is less than current time
