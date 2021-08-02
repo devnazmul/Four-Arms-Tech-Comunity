@@ -139,7 +139,7 @@ if (isset($_SESSION['unique_id'])) {
             </form>
             <p class="text-gray-500">
                 Already have an account?
-                <a class="text-blue-500" href="login.php"><b> Sign In</b></a>
+                <a class="text-blue-500" href="login.php"><b> Log In</b></a>
             </p>
         </div>
     </div>
