@@ -16,7 +16,7 @@ if (!empty($user_or_email) && !empty($password)) { // check if all inputs are fi
 
     if (mysqli_num_rows($sql) > 0) {
         // check if username or email and password are matched.
-        $sql2 = mysqli_query($conn, "SELECT * FROM users WHERE username = '{$user_or_email}' AND user_password = '{$password}'");
+        $sql2 = mysqli_query($conn, "SELECT * FROM users WHERE (username = '{$user_or_email}' OR user_email = '{$user_or_email}') AND user_password = '{$password}'");
 
         if (mysqli_num_rows($sql2) > 0) {
 
